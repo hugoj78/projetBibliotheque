@@ -1,5 +1,7 @@
 # projetBibliotheque
 
+by Adrien LEIB and Hugo-Jean EGU
+
 This application was generated using JHipster 6.10.4, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.10.4](https://www.jhipster.tech/documentation-archive/v6.10.4).
 
 ## Development
