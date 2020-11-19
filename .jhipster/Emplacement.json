@@ -1,0 +1,28 @@
+{
+  "name": "Emplacement",
+  "fields": [
+    {
+      "fieldName": "idEmplacement",
+      "fieldType": "UUID",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "nomEmplacement",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201119140750",
+  "entityTableName": "emplacement",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
