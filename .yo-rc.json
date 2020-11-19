@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.ynov.biblio"
+    },
+    "jhipsterVersion": "6.10.4",
+    "applicationType": "monolith",
+    "baseName": "projetBibliotheque",
+    "packageName": "com.ynov.biblio",
+    "packageFolder": "com/ynov/biblio",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OTIzODc3OTczY2NjZDJhN2ZlOWZlZWI5ZTI1NWIxYzIyYmFjZGEwYTBhYmQ3NTUwNTNiZjgzODIxYmNiYmExNGFiNzkwMTlmMzJlMWZjYjc1NWUxMDViZjUzM2E3YzM2NTcxNWZlYmJkZTNkMTk3ZDdjNTllOWE0ZGZlZmE3MTE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1605779622004,
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
