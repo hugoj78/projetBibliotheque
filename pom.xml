@@ -33,11 +33,12 @@
     	</repository>
         
     </distributionManagement>
-    
-    <properties>
-    	<!-- sonar properties -->
-	  	<sonar.projectKey>hugoj78_projetBibliotheque</sonar.projectKey>
 
+
+    <properties>
+   		<!-- sonar properties -->
+	  	<sonar.projectKey>hugoj78_projetBibliotheque</sonar.projectKey>
+	  	
         <!-- Build properties -->
         <maven.version>3.3.9</maven.version>
         <java.version>1.8</java.version>
@@ -815,7 +816,7 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.source.scanner.maven</groupId>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar-maven-plugin.version}</version>
                 </plugin>
