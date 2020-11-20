@@ -36,8 +36,6 @@
 
 
     <properties>
-   		<!-- sonar properties -->
-	  	<sonar.projectKey>hugoj78_projetBibliotheque</sonar.projectKey>
 	  	
         <!-- Build properties -->
         <maven.version>3.3.9</maven.version>
