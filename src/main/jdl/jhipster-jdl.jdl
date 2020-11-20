@@ -1,0 +1,67 @@
+entity Theme {
+	idTheme UUID required unique,
+    theme String
+}
+
+entity Livre {
+    idLivre UUID required unique,
+    titre String,
+    description String,
+    isbn String,
+    code String  
+}
+
+entity Emplacement {
+  	idEmplacement UUID required,
+    nomEmplacement String
+}
+
+entity Exemplaire {
+    idExemplaire UUID required,
+    disponibilite Boolean,
+    idLivre Integer
+}
+
+entity Emprunt {
+    idEmprunt UUID required,
+    dateEmprunt LocalDate,
+    idUtilisateur Integer,
+    idExemplaire Integer
+}
+
+entity Utilisateur {
+    idUtilisateur UUID required,
+    nom String,
+    prenom String,
+    dateNaissance LocalDate,
+    role String,
+    pseudo String,
+    motDePasse String
+}
+
+entity Autheur {
+    idAutheur UUID required,
+    autheur String
+}
+
+enum Language {
+    FRENCH, ENGLISH
+}
+
+relationship OneToOne {
+    Livre{Emplacement(idEmplacement)} to Emplacement,
+    Livre{Autheur(idAutheur)} to Autheur
+}
+
+relationship ManyToMany {
+	Livre{Theme(idTheme)} to Theme{Livre}
+}
+
+relationship OneToMany {
+	Livre{Exemplaire(idExemplaire)} to Exemplaire{Livre(idLivre)}
+}
+
+relationship OneToOne {
+	Emprunt{Exemplaire(idExemplaire)} to Exemplaire,
+    Emprunt{Utilisateur(idUtilisateur)} to Utilisateur
+}

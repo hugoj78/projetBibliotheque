@@ -1,0 +1,40 @@
+{
+  "name": "Exemplaire",
+  "fields": [
+    {
+      "fieldName": "idExemplaire",
+      "fieldType": "UUID",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "disponibilite",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "idLivre",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "livre",
+      "otherEntityRelationshipName": "exemplaire",
+      "relationshipName": "livre",
+      "otherEntityField": "idLivre"
+    }
+  ],
+  "changelogDate": "20201119140850",
+  "entityTableName": "exemplaire",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
