@@ -33,20 +33,11 @@
     	</repository>
         
     </distributionManagement>
-
-<!--     <distributionManagement> -->
-<!--         <snapshotRepository> -->
-<!--             <id>snapshots</id> -->
-<!--             <url>https://eguhj.jfrog.io/artifactory/libs-snapshot/</url> -->
-<!--         </snapshotRepository> -->
-<!--         <repository> -->
-<!--             <id>central</id> -->
-<!--             <url>https://eguhj.jfrog.io/artifactory/libs-release/</url> -->
-<!--         </repository> -->
-<!--     </distributionManagement> -->
-    <!-- jhipster-needle-distribution-management -->
-
+    
     <properties>
+    	<!-- sonar properties -->
+	  	<sonar.projectKey>hugoj78_projetBibliotheque</sonar.projectKey>
+
         <!-- Build properties -->
         <maven.version>3.3.9</maven.version>
         <java.version>1.8</java.version>
@@ -824,7 +815,7 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <groupId>org.source.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar-maven-plugin.version}</version>
                 </plugin>
