@@ -16,7 +16,34 @@
     <pluginRepositories>
         <!-- jhipster-needle-maven-plugin-repository -->
     </pluginRepositories>
+    
+     <distributionManagement>
+        <!--libs-snapshot --> 
+        <snapshotRepository>
+        	<id>snapshots</id>
+        	<name>libs-snapshot</name>
+        	<url>https://eguhj.jfrog.io/artifactory/libs-snapshot/</url>
+    	</snapshotRepository>
+        
+        <!-- libs-release --> 
+        <repository>
+        	<id>central</id>
+       		<name>libs-release</name>
+        	<url>https://eguhj.jfrog.io/artifactory/libs-release/</url>
+    	</repository>
+        
+    </distributionManagement>
 
+<!--     <distributionManagement> -->
+<!--         <snapshotRepository> -->
+<!--             <id>snapshots</id> -->
+<!--             <url>https://eguhj.jfrog.io/artifactory/libs-snapshot/</url> -->
+<!--         </snapshotRepository> -->
+<!--         <repository> -->
+<!--             <id>central</id> -->
+<!--             <url>https://eguhj.jfrog.io/artifactory/libs-release/</url> -->
+<!--         </repository> -->
+<!--     </distributionManagement> -->
     <!-- jhipster-needle-distribution-management -->
 
     <properties>
