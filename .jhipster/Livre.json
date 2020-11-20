@@ -1,0 +1,72 @@
+{
+  "name": "Livre",
+  "fields": [
+    {
+      "fieldName": "idLivre",
+      "fieldType": "UUID",
+      "fieldValidateRules": [
+        "required",
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "titre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isbn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "emplacement",
+      "otherEntityRelationshipName": "livre",
+      "relationshipName": "emplacement",
+      "otherEntityField": "idEmplacement",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "autheur",
+      "otherEntityRelationshipName": "livre",
+      "relationshipName": "autheur",
+      "otherEntityField": "idAutheur",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "exemplaire",
+      "otherEntityRelationshipName": "livre",
+      "relationshipName": "exemplaire"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "theme",
+      "otherEntityRelationshipName": "livre",
+      "relationshipName": "theme",
+      "otherEntityField": "idTheme",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20201119140650",
+  "entityTableName": "livre",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

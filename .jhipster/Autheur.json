@@ -1,0 +1,28 @@
+{
+  "name": "Autheur",
+  "fields": [
+    {
+      "fieldName": "idAutheur",
+      "fieldType": "UUID",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "autheur",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201119141150",
+  "entityTableName": "autheur",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

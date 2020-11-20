@@ -14,7 +14,17 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140550_added_entity_Theme.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140650_added_entity_Livre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140750_added_entity_Emplacement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140850_added_entity_Exemplaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140950_added_entity_Emprunt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119141050_added_entity_Utilisateur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119141150_added_entity_Autheur.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20201119140650_added_entity_constraints_Livre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140850_added_entity_constraints_Exemplaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201119140950_added_entity_constraints_Emprunt.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

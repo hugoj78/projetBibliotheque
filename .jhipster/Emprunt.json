@@ -1,0 +1,53 @@
+{
+  "name": "Emprunt",
+  "fields": [
+    {
+      "fieldName": "idEmprunt",
+      "fieldType": "UUID",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dateEmprunt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idUtilisateur",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idExemplaire",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "exemplaire",
+      "otherEntityRelationshipName": "emprunt",
+      "relationshipName": "exemplaire",
+      "otherEntityField": "idExemplaire",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "utilisateur",
+      "otherEntityRelationshipName": "emprunt",
+      "relationshipName": "utilisateur",
+      "otherEntityField": "idUtilisateur",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20201119140950",
+  "entityTableName": "emprunt",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
