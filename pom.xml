@@ -34,6 +34,16 @@
         
     </distributionManagement>
 
+<!--     <distributionManagement> -->
+<!--         <snapshotRepository> -->
+<!--             <id>snapshots</id> -->
+<!--             <url>https://eguhj.jfrog.io/artifactory/libs-snapshot/</url> -->
+<!--         </snapshotRepository> -->
+<!--         <repository> -->
+<!--             <id>central</id> -->
+<!--             <url>https://eguhj.jfrog.io/artifactory/libs-release/</url> -->
+<!--         </repository> -->
+<!--     </distributionManagement> -->
     <!-- jhipster-needle-distribution-management -->
 
     <properties>
