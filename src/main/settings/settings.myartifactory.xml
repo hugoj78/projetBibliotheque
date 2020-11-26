@@ -4,12 +4,12 @@
   <servers>
     <server>
       <username>hugojeanegu@gmail.com</username>
-      <password>${env.JFROG_PASSWORD}</password>
+      <password>AP9jEDS63NgMHQNTmsgAdw5br1S</password>
       <id>central</id>
     </server>
     <server>
       <username>hugojeanegu@gmail.com</username>
-      <password>${env.JFROG_PASSWORD}</password>
+      <password>AP9jEDS63NgMHQNTmsgAdw5br1S</password>
       <id>snapshots</id>
     </server>
   </servers>
