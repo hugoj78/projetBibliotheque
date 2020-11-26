@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <servers>
     <server>
-      <username>hugojeanegu@gmail.com</username>
-      <password>AP9jEDS63NgMHQNTmsgAdw5br1S</password>
+      <username>${env.JFROG_USER}</username>
+      <password>${env.JFROG_PASSWORD}</password>
       <id>central</id>
     </server>
     <server>
-      <username>hugojeanegu@gmail.com</username>
-      <password>AP9jEDS63NgMHQNTmsgAdw5br1S</password>
+      <username>${env.JFROG_USER}</username>
+      <password>${env.JFROG_PASSWORD}</password>
       <id>snapshots</id>
     </server>
   </servers>
