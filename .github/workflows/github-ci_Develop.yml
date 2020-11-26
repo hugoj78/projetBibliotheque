@@ -41,6 +41,9 @@ jobs:
                       echo No SONAR_TOKEN, skipping...
                   fi
             - name: Package application
+              env: 
+                  JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
+                  JFROG_USER: ${{ secrets.JFROG_USER }}
               run: |
                   java -version
                   echo "-------------------PREVIOUS SETTINGS.xml------------------------------"
