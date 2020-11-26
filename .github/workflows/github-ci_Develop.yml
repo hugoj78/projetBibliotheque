@@ -2,7 +2,7 @@ name: Application CI
 on:
     push:
         branches:
-            - main
+            - develop
 jobs:
     pipeline:
         name: projetBibliotheque pipeline
@@ -41,23 +41,23 @@ jobs:
                       echo No SONAR_TOKEN, skipping...
                   fi
             - name: Package application
-              env:
-                JF_ARTIFACTORY_1: ${{ secrets.JFROG_TOKEN }}
+              env: 
+                  JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
+                  JFROG_USER: ${{ secrets.JFROG_USER }}
               run: |
-                  java -version
-                  echo "-------------------PREVIOUS SETTINGS.xml------------------------------"
-                  cat ~/.m2/settings.xml
-                  echo "-------------------PREVIOUS SETTINGS.xml------------------------------"
                   mv src/main/settings/settings.myartifactory.xml ~/.m2/settings.xml
-                  echo "-------------------NEW SETTINGS.xml------------------------------"
-                  cat ~/.m2/settings.xml
-                  echo "-------------------NEW SETTINGS.xml------------------------------"
                   ./mvnw -ntp package deploy -Pprod -DskipTests
-                  
-              #mvn -ntp package deploy -Pprod -DskipTests
                     
-            - name: Deploy to Heroku
-              if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-              env:
-                  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-              run: ./mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=projet-bibliotheque
+    jobs_2:
+      name: Deploy to Heroku
+     #needs: pipeline
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
+          with:
+            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+            heroku_app_name: ${{secrets.HEROKU_APP_NAME_DEV}} #Must be unique in Heroku
+            heroku_email: ${{secrets.HEROKU_EMAIL}}
+            branch: "develop"
+            buildpack: ${{secrets.HEROKU_BUILD_PACK}}
