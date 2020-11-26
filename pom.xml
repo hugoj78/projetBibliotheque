@@ -17,6 +17,7 @@
         <!-- jhipster-needle-maven-plugin-repository -->
     </pluginRepositories>
     
+    
      <distributionManagement>
         <!--libs-snapshot --> 
         <snapshotRepository>
