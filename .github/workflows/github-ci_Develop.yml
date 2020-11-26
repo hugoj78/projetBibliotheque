@@ -79,21 +79,3 @@ jobs:
             run: mvn deploy
             env:
               GITHUB_TOKEN: ${{ github.token }} # GITHUB_TOKEN is the default env for the password
-
-    jobs4:
-        name: job8 Publish release to GitHub Packages Apache Maven
-        needs: jobs3
-        runs-on: ubuntu-latest
-        steps:
-          - name: Set up JDK 1.8
-            uses: actions/setup-java@v1
-            with:
-              java-version: 1.8
-
-          - name: Build with Maven
-            run: mvn -B package --file pom.xml
-
-          - name: Publish to GitHub Packages Apache Maven
-            run: mvn deploy
-            env:
-              GITHUB_TOKEN: ${{ github.token }} # GITHUB_TOKEN is the default env for the password
