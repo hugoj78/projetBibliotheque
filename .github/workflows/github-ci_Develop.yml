@@ -45,17 +45,8 @@ jobs:
                   JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
                   JFROG_USER: ${{ secrets.JFROG_USER }}
               run: |
-                  java -version
-                  echo "-------------------PREVIOUS SETTINGS.xml------------------------------"
-                  cat ~/.m2/settings.xml
-                  echo "-------------------PREVIOUS SETTINGS.xml------------------------------"
                   mv src/main/settings/settings.myartifactory.xml ~/.m2/settings.xml
-                  echo "-------------------NEW SETTINGS.xml------------------------------"
-                  cat ~/.m2/settings.xml
-                  echo "-------------------NEW SETTINGS.xml------------------------------"
                   ./mvnw -ntp package deploy -Pprod -DskipTests
-                  
-              #mvn -ntp package deploy -Pprod -DskipTests
                     
     jobs_2:
       name: Deploy to Heroku
