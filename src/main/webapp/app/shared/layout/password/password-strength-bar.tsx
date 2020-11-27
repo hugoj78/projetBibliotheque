@@ -64,7 +64,7 @@ export const PasswordStrengthBar = ({ password }: IPasswordStrengthBarProps) => 
 
   return (
     <div id="strength">
-      <small>Password strength:</small>
+      <small>Force du Mot de Passe :</small>
       <ul id="strengthBar">{points}</ul>
     </div>
   );

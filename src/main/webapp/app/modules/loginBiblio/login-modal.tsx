@@ -24,47 +24,47 @@ class LoginModal extends React.Component<ILoginModalProps> {
       <Modal isOpen={this.props.showModal} toggle={handleClose} backdrop="static" id="login-page" autoFocus={false}>
         <AvForm onSubmit={this.handleSubmit}>
           <ModalHeader id="login-title" toggle={handleClose}>
-            Sign in
+            Connexion
           </ModalHeader>
           <ModalBody>
             <Row>
               <Col md="12">
                 {loginError ? (
                   <Alert color="danger">
-                    <strong>Failed to sign in!</strong> Please check your credentials and try again.
+                    <strong>Erreur de connexion !</strong> Vérifier vos credentials and réessayer s&apos;il vous plait.
                   </Alert>
                 ) : null}
               </Col>
               <Col md="12">
                 <AvField
                   name="username"
-                  label="Username"
-                  placeholder="Your username"
+                  label="Utilisateur"
+                  placeholder="Votre Utilisateur"
                   required
-                  errorMessage="Username cannot be empty!"
+                  errorMessage="Utilisateur ne peut pas être vide"
                   autoFocus
                 />
                 <AvField
                   name="password"
                   type="password"
-                  label="Password"
-                  placeholder="Your password"
+                  label="Mot de Passe"
+                  placeholder="Ton mot de passe"
                   required
-                  errorMessage="Password cannot be empty!"
+                  errorMessage="Ton mot de passe ne peut pas être vide"
                 />
                 <AvGroup check inline>
                   <Label className="form-check-label">
-                    <AvInput type="checkbox" name="rememberMe" /> Remember me
+                    <AvInput type="checkbox" name="rememberMe" /> Se rappeler de moi
                   </Label>
                 </AvGroup>
               </Col>
             </Row>
             <div className="mt-1">&nbsp;</div>
             <Alert color="warning">
-              <Link to="/account/reset/request">Did you forget your password?</Link>
+              <Link to="/account/reset/request">Vous avez oublié votre mot de passe ?</Link>
             </Alert>
             <Alert color="warning">
-              <span>You don&apos;t have an account yet?</span> <Link to="/account/register">Register a new account</Link>
+              <span>Vous n&apos;avez pas de compte encore ?</span> <Link to="/account/register">Créer un nouveau compte</Link>
             </Alert>
           </ModalBody>
           <ModalFooter>
