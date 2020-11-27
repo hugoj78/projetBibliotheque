@@ -8,6 +8,127 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Projet Bibliotheque</name>
+    <description>Projet developpé par Hugo Jean EGU et Adrien dans le cadre d'un projet scolaire.</description>
+    <scm>
+        <connection>scm:git@github.com:hugoj78/projetBibliotheque.git</connection>
+        <developerConnection>scm:git@github.com:hugoj78/projetBibliotheque.git</developerConnection>
+        <url>scm:git@github.com:hugoj78/projetBibliotheque.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+      <developers>
+        <developer>
+          <id>adrienleib</id>
+          <name>LEIB Adrien</name>
+          <email>adrien.leib@ynov.com</email>
+          <url>https://github.com/AdrienLEIB</url>
+          <organization>Ynov</organization>
+          <organizationUrl>https://www.ynov.com/</organizationUrl>
+          <roles>
+            <role>designer</role>
+            <role>developer</role>
+          </roles>
+          <timezone>Europe/Paris</timezone>
+          <properties>
+            <picUrl>https://www.instagram.com/adrienleib/</picUrl>
+          </properties>
+        </developer>
+        <developer>
+          <id>hugoj78</id>
+          <name>EGU Hugo-Jean</name>
+          <email>hugojean.egu@ynov.com</email>
+          <url>https://github.com/hugoj78</url>
+          <organization>Ynov</organization>
+          <organizationUrl>https://www.ynov.com/</organizationUrl>
+          <roles>
+            <role>designer</role>
+            <role>developer</role>
+          </roles>
+          <timezone>Europe/Paris</timezone>
+          <properties>
+            <picUrl>https://www.instagram.com/hugoj78/</picUrl>
+          </properties>
+        </developer>
+      </developers>
+
+        <contributors>
+            <contributor>
+              <name>Adrien</name>
+              <email>adrien.leib@ynov.com</email>
+              <url>https://github.com/AdrienLEIB</url>
+              <organization>Ynov</organization>
+              <organizationUrl>https://www.ynov.com/</organizationUrl>
+              <roles>
+                <role>developer</role>
+              </roles>
+              <timezone>Europe/Paris</timezone>
+              <properties>
+                <gtalk>adrien.leib@ynov.com</gtalk>
+              </properties>
+            </contributor>
+            <contributor>
+              <name>Hugo-jean</name>
+              <email>hugojean.egu@ynov.com</email>
+              <url>https://github.com/hugoj78</url>
+              <organization>Ynov</organization>
+              <organizationUrl>https://www.ynov.com/</organizationUrl>
+              <roles>
+                <role>developer</role>
+              </roles>
+              <timezone>Europe/Paris</timezone>
+              <properties>
+                <gtalk>hugojean.egub@ynov.com</gtalk>
+              </properties>
+            </contributor>
+            <contributor>
+              <name>Jean</name>
+              <email>jean.bilong@ynov.com</email>
+              <url>https://github.com/bilonjea</url>
+              <organization>Ynov</organization>
+              <organizationUrl>https://www.ynov.com/</organizationUrl>
+              <roles>
+                <role>correcteur</role>
+              </roles>
+              <timezone>Europe/Paris</timezone>
+              <properties>
+                <gtalk>jean.bilong@ynov.com</gtalk>
+              </properties>
+            </contributor>
+          </contributors>
+
+        <licenses>
+          <license>
+            <name>Apache License, Version 3.3.9</name>
+            <url>https://maven.apache.org/ref/3.3.9/maven-model/apidocs/org/apache/maven/model/License.html</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+          </license>
+          <license>
+            <name>Java License, Version 1.8</name>
+            <url>https://www.oracle.com/downloads/licenses/javase-license1.html</url>
+            <distribution>repo</distribution>
+            <comments>No comment because we are strong</comments>
+          </license>
+          <license>
+            <name>Node License, Version v12.16.1</name>
+            <url>https://docs.oracle.com/communications/F25434_01/docs.10/CNC%202.1%20Licensing%20Manual/GUID-994D4BFE-FAED-4D42-A3A2-6B90EF444769.htm</url>
+            <distribution>repo</distribution>
+            <comments>No comment because we are strong</comments>
+          </license>
+
+          <license>
+            <name>NPM License, Version 6.14.5</name>
+            <url>https://www.npmjs.com/package/license</url>
+            <distribution>repo</distribution>
+            <comments>No comment because we are strong</comments>
+          </license>
+          <license>
+            <name>jhpsiter License, Version 3.9.0</name>
+            <url>https://www.jhipster.tech/jdl/</url>
+            <distribution>repo</distribution>
+            <comments>No comment because we are strong</comments>
+          </license>
+        </licenses>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
