@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
+import { AUTHORITIES } from 'app/config/constants';
+import PrivateRoute from 'app/shared/auth/private-route';
 
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 
