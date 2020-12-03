@@ -11,6 +11,9 @@ import { getEntity, updateEntity, createEntity, reset } from './utilisateur.redu
 import { IUtilisateur } from 'app/shared/model/utilisateur.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
+import  uuid from 'react-native-uuid';
+
+// const uuid = require('react-native-uuid');
 
 export interface IUtilisateurUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -71,7 +74,7 @@ export const UtilisateurUpdate = (props: IUtilisateurUpdateProps) => {
                   <AvInput id="utilisateur-id" type="text" className="form-control" name="id" required readOnly />
                 </AvGroup>
               ) : null}
-              <AvGroup>
+              <AvGroup hidden ="true">
                 <Label id="idUtilisateurLabel" for="utilisateur-idUtilisateur">
                   Id Utilisateur
                 </Label>
@@ -79,9 +82,7 @@ export const UtilisateurUpdate = (props: IUtilisateurUpdateProps) => {
                   id="utilisateur-idUtilisateur"
                   type="text"
                   name="idUtilisateur"
-                  validate={{
-                    required: { value: true, errorMessage: 'This field is required.' },
-                  }}
+                  value= {uuid()}
                 />
               </AvGroup>
               <AvGroup>
@@ -118,7 +119,7 @@ export const UtilisateurUpdate = (props: IUtilisateurUpdateProps) => {
                 <Label id="motDePasseLabel" for="utilisateur-motDePasse">
                   Mot De Passe
                 </Label>
-                <AvField id="utilisateur-motDePasse" type="text" name="motDePasse" />
+                <AvField id="utilisateur-motDePasse" type="password" name="motDePasse" />
               </AvGroup>
               <Button tag={Link} id="cancel-save" to="/utilisateur" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />

@@ -3,10 +3,10 @@ import { Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 import Login from 'app/modules/loginBiblio/login';
-import Register from 'app/modules/account/registerBiblio/register';
-import Activate from 'app/modules/account/activate/activate';
-import PasswordResetInit from 'app/modules/account/password-reset/init/password-reset-init';
-import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
+import Register from 'app/entities/utilisateur/utilisateur-update';
+// import Activate from 'app/modules/account/activate/activate';
+// import PasswordResetInit from 'app/modules/account/password-reset/init/password-reset-init';
+// import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
 import Logout from 'app/modules/login/logout';
 import HomePage from 'app/modules/homeBiblio/homePage';
 import Entities from 'app/entities';
@@ -34,8 +34,8 @@ const Routes = () => (
       {/* <ErrorBoundaryRoute path="/account/activate/:key?" component={Activate} />
       <ErrorBoundaryRoute path="/account/reset/request" component={PasswordResetInit} />
       <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} /> */}
-      <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
-      <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <ErrorBoundaryRoute path="/admin" component={Admin} />
+      <ErrorBoundaryRoute path="/account" component={Account} />
       <ErrorBoundaryRoute path="/" exact component={HomePage} />
       <ErrorBoundaryRoute path="/" component={Entities} />
       <ErrorBoundaryRoute component={PageNotFound} />
