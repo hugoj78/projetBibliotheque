@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 import Login from 'app/modules/loginBiblio/login';
-import Register from 'app/entities/utilisateur/utilisateur-update';
+import Register from 'app/modules/account/registerBiblio/register';
 // import Activate from 'app/modules/account/activate/activate';
 // import PasswordResetInit from 'app/modules/account/password-reset/init/password-reset-init';
 // import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
