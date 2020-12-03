@@ -24,7 +24,7 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}emplacement`} component={Emplacement} />
       <ErrorBoundaryRoute path={`${match.url}exemplaire`} component={Exemplaire} />
       <ErrorBoundaryRoute path={`${match.url}emprunt`} component={Emprunt} />
-      <PrivateRoute path={`${match.url}utilisateur`} component={Utilisateur} hasAnyAuthorities={[AUTHORITIES.ADMIN]}/>
+      <ErrorBoundaryRoute path={`${match.url}utilisateur`} component={Utilisateur}/>
       <ErrorBoundaryRoute path={`${match.url}autheur`} component={Autheur} />
       {/* jhipster-needle-add-route-path - JHipster will add routes here */}
     </Switch>
