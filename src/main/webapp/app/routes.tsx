@@ -4,9 +4,9 @@ import Loadable from 'react-loadable';
 
 import Login from 'app/modules/loginBiblio/login';
 import Register from 'app/modules/account/registerBiblio/register';
-// import Activate from 'app/modules/account/activate/activate';
-// import PasswordResetInit from 'app/modules/account/password-reset/init/password-reset-init';
-// import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
+import Activate from 'app/modules/account/activate/activate';
+import PasswordResetInit from 'app/modules/account/password-reset/init/password-reset-init';
+import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
 import Logout from 'app/modules/login/logout';
 import HomePage from 'app/modules/homeBiblio/homePage';
 import Entities from 'app/entities';
@@ -31,9 +31,9 @@ const Routes = () => (
       <ErrorBoundaryRoute path="/login" component={Login} />
       <ErrorBoundaryRoute path="/logout" component={Logout} />
       <ErrorBoundaryRoute path="/account/register" component={Register} />
-      {/* <ErrorBoundaryRoute path="/account/activate/:key?" component={Activate} />
+      <ErrorBoundaryRoute path="/account/activate/:key?" component={Activate} />
       <ErrorBoundaryRoute path="/account/reset/request" component={PasswordResetInit} />
-      <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} /> */}
+      <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} />
       <ErrorBoundaryRoute path="/admin" component={Admin} />
       <ErrorBoundaryRoute path="/account" component={Account} />
       <ErrorBoundaryRoute path="/" exact component={HomePage} />
