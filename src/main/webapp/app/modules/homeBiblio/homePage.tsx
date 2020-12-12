@@ -41,7 +41,7 @@ export const HomePage = (props: IHomeProp) => {
 
             <Alert color="success">
               Consulter les&nbsp;
-              <Link to="/livres" className="alert-link">
+              <Link to="/livre" className="alert-link">
                 Livres
               </Link>
             </Alert>
