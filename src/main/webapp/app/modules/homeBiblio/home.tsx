@@ -21,6 +21,55 @@ export const HomePage = (props: IHomeProp) => {
         {account && account.login ? (
           <div>
             <Alert color="success">Vous etes connecté en tant que {account.login}.</Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/emprunt" className="alert-link">
+                Emprunts
+              </Link>
+            </Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/livre" className="alert-link">
+                Livres
+              </Link>
+            </Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/autheur" className="alert-link">
+                Autheurs
+              </Link>
+            </Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/theme" className="alert-link">
+                Themes
+              </Link>
+            </Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/utilisateur" className="alert-link">
+                Utilisateurs
+              </Link>
+            </Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/emplacement" className="alert-link">
+                Emplacements
+              </Link>
+            </Alert>
+
+            <Alert color="success">
+              Consulter les&nbsp;
+              <Link to="/exemplaire" className="alert-link">
+                Exemplaires
+              </Link>
+            </Alert>
           </div>
         ) : (
           <div>
