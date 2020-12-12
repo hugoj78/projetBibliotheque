@@ -23,16 +23,16 @@ const accountMenuItemsAuthenticated = (
 const accountMenuItems = (
   <>
     <MenuItem id="login-item" icon="sign-in-alt" to="/login">
-      Sign in
+      Se connecter
     </MenuItem>
     <MenuItem icon="sign-in-alt" to="/account/register">
-      Register
+      S&apos;enregistrer
     </MenuItem>
   </>
 );
 
 export const AccountMenu = ({ isAuthenticated = false }) => (
-  <NavDropdown icon="user" name="Account" id="account-menu">
+  <NavDropdown icon="user" name="Compte" id="account-menu">
     {isAuthenticated ? accountMenuItemsAuthenticated : accountMenuItems}
   </NavDropdown>
 );
