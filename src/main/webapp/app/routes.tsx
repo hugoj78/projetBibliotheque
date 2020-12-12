@@ -8,7 +8,7 @@ import Activate from 'app/modules/account/activate/activate';
 import PasswordResetInit from 'app/modules/account/password-reset/init/password-reset-init';
 import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
 import Logout from 'app/modules/login/logout';
-import HomePage from 'app/modules/homeBiblio/homePage';
+import HomePage from 'app/modules/homeBiblio/home';
 import Entities from 'app/entities';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
@@ -34,10 +34,10 @@ const Routes = () => (
       <ErrorBoundaryRoute path="/account/activate/:key?" component={Activate} />
       <ErrorBoundaryRoute path="/account/reset/request" component={PasswordResetInit} />
       <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} />
-      <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
-      <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <ErrorBoundaryRoute path="/admin" component={Admin} />
+      <ErrorBoundaryRoute path="/account" component={Account} />
       <ErrorBoundaryRoute path="/" exact component={HomePage} />
-      <PrivateRoute path="/" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
+      <ErrorBoundaryRoute path="/" component={Entities} />
       <ErrorBoundaryRoute component={PageNotFound} />
     </Switch>
   </div>

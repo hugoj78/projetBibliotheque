@@ -50,7 +50,7 @@ class LoginModal extends React.Component<ILoginModalProps> {
                   label="Mot de Passe"
                   placeholder="Ton mot de passe"
                   required
-                  errorMessage="Ton mot de passe ne peut pas être vide"
+                  errorMessage="Ton mot de passe ne peut pas être vide !"
                 />
                 <AvGroup check inline>
                   <Label className="form-check-label">
