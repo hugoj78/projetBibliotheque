@@ -69,12 +69,12 @@ export const UtilisateurUpdate = (props: IUtilisateurUpdateProps) => {
           ) : (
             <AvForm model={isNew ? {} : utilisateurEntity} onSubmit={saveEntity}>
               {!isNew ? (
-                <AvGroup>
+                <AvGroup hidden="true">
                   <Label for="utilisateur-id">ID</Label>
-                  <AvInput id="utilisateur-id" type="text" className="form-control" name="id" required readOnly />
+                  <AvInput id="utilisateur-id" type="text" className="form-control" name="id" required readOnly value={uuid()}/>
                 </AvGroup>
               ) : null}
-              <AvGroup hidden ="true">
+              <AvGroup hidden="true">
                 <Label id="idUtilisateurLabel" for="utilisateur-idUtilisateur">
                   Id Utilisateur
                 </Label>
